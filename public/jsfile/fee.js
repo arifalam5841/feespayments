@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     axios
-      .post("/check-name", { name })
+      .post("https://feespayment.onrender.com/check-name", { name })
       .then((response) => {
         if (response.data.success) {
           // this is value of "res.json"
@@ -61,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     axios
-      .post("/pay-fees", { name: userName.textContent, amount })
+      .post("https://feespayment.onrender.com/pay-fees", {
+        name: userName.textContent,
+        amount,
+      })
       .then((response) => {
         if (response.data.success) {
           const user = response.data.user;
@@ -95,15 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    axios.post("/check-fee", { name }).then((response) => {
-      if (response.data.success) {
-        showfee.innerHTML = response.data.fees;
-        showfee.style.display = "block";
-        feeerror.style.display = "none";
-      } else {
-        feeerror.textContent = response.data.message;
-        feeerror.style.display = "block";
-      }
-    });
+    axios
+      .post("https://feespayment.onrender.com/check-fee", { name })
+      .then((response) => {
+        if (response.data.success) {
+          showfee.innerHTML = response.data.fees;
+          showfee.style.display = "block";
+          feeerror.style.display = "none";
+        } else {
+          feeerror.textContent = response.data.message;
+          feeerror.style.display = "block";
+        }
+      });
   });
 });

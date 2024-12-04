@@ -5,10 +5,19 @@ const app = express();
 const port = process.env.PORT || 3000;
 const bodyparse = require("body-parser");
 const hbs = require("hbs");
+const cors = require("cors");
 const { engine } = require("express-handlebars");
 const { inflate } = require("zlib");
 const publicfilepath = path.join(__dirname, "./public");
 const partialspath = path.join(__dirname, "./partials");
+
+app.use(
+  cors({
+    origin: "https://feespayments.vercel.app/", // Replace with your actual Vercel frontend URL
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 
 app.use(bodyparse.urlencoded({ extend: true }));
 app.use(express.json()); // For JSON payloads
