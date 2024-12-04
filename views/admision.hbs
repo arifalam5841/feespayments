@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission</title>
+      <link rel="stylesheet" href="cssfile/navstyle.css">
+      <link rel="stylesheet" href="cssfile/admision.css">
+  </head>
+  <body>
+      {{>navbars}}
+
+      <form id="admision-form" action="/admision-done" method="post">
+             <p>Student name</p>
+            <input type="text" placeholder="Student Name" name="studentname">
+            <p>Last school</p>
+            <input type="text" placeholder="Type..." name="lastschool">  
+          
+            <p>Class</p>
+            <input type="text" placeholder="Type..." name="classes"> 
+             <p>Cast</p>
+            <input type="text" placeholder="Type..." name="cast">  
+            <p>father's name</p>
+            <input type="text" placeholder="Type..." name="father">  
+            <p>mother's name</p>
+            <input type="text" placeholder="Type..." name="mothers">
+
+              <h4>Total fees - 70,000/-</h4>
+            <p>Fees paid on the time of admision</p>
+            <input type="number" placeholder="Type..." name="feespaid">  
+            
+
+          <button type="submit" >Submit</button>
+      </form>
+  </body>
+</html>

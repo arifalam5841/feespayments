@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fees</title>
+  </head>
+  <link rel="stylesheet" href="cssfile/fees.css">
+     <link rel="stylesheet" href="cssfile/navstyle.css">
+  <body>
+    {{>navbars}}
+
+    <div id="main-cont">
+      <div>
+      <h1>Fees Payment System</h1>
+    <div id="nameForm">
+        <label for="nameInput">Enter Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button id="checkNameBtn">Check Name</button>
+        <p id="errorMessage" style="display: none; color: red;"></p>
+    </div>
+
+    <div id="feeDetails" style="display: none;">
+        <h2>Name: <span id="userName"></span></h2>
+        <h2>Paid Amount: <span id="paidAmount"></span></h2>
+        <h2>To Pay: <span id="toPayAmount"></span></h2>
+
+        <label for="payInput">Enter Amount to Pay:</label>
+        <input type="text" id="payInput" placeholder="Enter amount">
+        <button id="payFeesBtn">Pay Fees</button>
+        <p id="successMessage" style="display: none;"></p>
+    </div>
+</div>
+
+<div id="check-fee-cont">
+  <h1>Enter the name of the student you want to get fee</h1>
+  <div>
+  <input type="text" id="check-fee-name" placeholder="Name...">
+  <button id="check-fee-btn" >Check</button>
+
+  </div>
+  <h2 style="color: green;" id="display-fees">64545</h2>
+  <p id="feeshowerror" style="display: none;">dsljasd</p>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="jsfile/fee.js"></script>
+  </body>
+  
+</html>

@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+div {
+  background-color: black;
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+div a {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}

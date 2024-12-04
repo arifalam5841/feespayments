@@ -1,0 +1,40 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#admision-form {
+  margin: 50px auto;
+  width: fit-content;
+  background-color: cornflowerblue;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#admision-form input {
+  padding: 10px;
+  width: 400px;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+#admision-form p {
+  color: rgb(0, 0, 0);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+}
+
+#admision-form h4 {
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: white;
+  padding: 10px;
+}
+#admision-form button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  margin: 11px;
+}
